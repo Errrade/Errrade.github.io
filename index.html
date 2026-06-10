@@ -13,10 +13,10 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header">
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="index.html" aria-label="Errrade home">Errrade</a>
-        <ul class="nav-links">
+    <header class="global-nav">
+      <nav class="global-nav-inner" aria-label="Primary navigation">
+        <a class="global-brand" href="index.html" aria-label="Errrade home">Errrade</a>
+        <ul class="global-links">
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#cv">CV</a></li>
@@ -25,109 +25,137 @@
       </nav>
     </header>
 
+    <div class="sub-nav">
+      <nav class="sub-nav-inner" aria-label="Section navigation">
+        <a class="sub-nav-title" href="index.html">Personal Website</a>
+        <ul class="sub-nav-links">
+          <li><a href="#about">Profile</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="sub-nav-cta" href="assets/cv.pdf" type="application/pdf">View CV</a>
+      </nav>
+    </div>
+
     <main id="main-content">
-      <section class="hero" aria-labelledby="intro-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Personal website</p>
-          <h1 id="intro-title">Errrade</h1>
-          <p class="lead">
-            A simple home for my profile, selected work, and curriculum vitae.
+      <section class="tile hero-tile tile-light" aria-labelledby="intro-title">
+        <div class="tile-inner hero-layout">
+          <div class="hero-copy">
+            <p class="kicker">Personal Website</p>
+            <h1 id="intro-title">Errrade</h1>
+            <p class="lead">
+              A simple home for my profile, selected work, and curriculum vitae.
+            </p>
+            <div class="cta-row" aria-label="Primary actions">
+              <a class="button button-primary" href="assets/cv.pdf" type="application/pdf">
+                View CV
+              </a>
+              <a class="button button-secondary" href="#work">Explore work</a>
+            </div>
+          </div>
+
+          <figure class="profile-artifact">
+            <img
+              class="profile-image"
+              src="assets/profile.jpg"
+              alt="Portrait of Errrade"
+              width="640"
+              height="640"
+              loading="eager"
+              onerror="if (!this.dataset.fallback) { this.dataset.fallback = 'true'; this.src = 'assets/profile.png'; } else { this.hidden = true; this.nextElementSibling.hidden = false; }"
+            >
+            <span class="profile-fallback" hidden>Profile image</span>
+          </figure>
+        </div>
+      </section>
+
+      <section id="about" class="tile tile-dark" aria-labelledby="about-title">
+        <div class="tile-inner centered-copy">
+          <p class="kicker">About</p>
+          <h2 id="about-title">Focused, practical, and always improving.</h2>
+          <p>
+            I use this page to share a concise snapshot of who I am, what I am
+            working on, and where to find my current resume.
           </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="assets/cv.pdf" type="application/pdf">
-              View CV
-            </a>
-            <a class="button secondary" href="#contact">Get in touch</a>
+        </div>
+      </section>
+
+      <section id="work" class="tile tile-parchment" aria-labelledby="work-title">
+        <div class="tile-inner">
+          <div class="section-intro">
+            <p class="kicker">Work</p>
+            <h2 id="work-title">Selected areas of interest</h2>
+            <p>
+              A compact overview of the technical, research, and writing areas
+              that shape my current work.
+            </p>
+          </div>
+
+          <div class="utility-grid">
+            <article class="utility-card">
+              <h3>Projects</h3>
+              <p>
+                Selected technical and creative work, with an emphasis on clear
+                problem solving and practical outcomes.
+              </p>
+            </article>
+            <article class="utility-card">
+              <h3>Research</h3>
+              <p>
+                Current topics, experiments, and notes from areas I am actively
+                exploring.
+              </p>
+            </article>
+            <article class="utility-card">
+              <h3>Writing</h3>
+              <p>
+                Essays, notes, and documentation that capture ideas, decisions,
+                and lessons learned.
+              </p>
+            </article>
           </div>
         </div>
-
-        <div class="profile-panel">
-          <img
-            class="profile-image"
-            src="assets/profile.jpg"
-            alt="Portrait of Errrade"
-            width="360"
-            height="360"
-            onerror="this.onerror=null; this.src='assets/profile.png';"
-          >
-        </div>
       </section>
 
-      <section id="about" class="section" aria-labelledby="about-title">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">Focused, practical, and always improving.</h2>
-        </div>
-        <p>
-          I use this page to share a concise snapshot of who I am, what I am
-          working on, and where to find my current resume.
-        </p>
-      </section>
-
-      <section id="work" class="section" aria-labelledby="work-title">
-        <div class="section-heading">
-          <p class="eyebrow">Work</p>
-          <h2 id="work-title">Selected areas of interest</h2>
-        </div>
-        <div class="work-grid">
-          <article class="work-card">
-            <h3>Projects</h3>
-            <p>
-              Selected technical and creative work, with an emphasis on clear
-              problem solving and practical outcomes.
-            </p>
-          </article>
-          <article class="work-card">
-            <h3>Research</h3>
-            <p>
-              Current topics, experiments, and notes from areas I am actively
-              exploring.
-            </p>
-          </article>
-          <article class="work-card">
-            <h3>Writing</h3>
-            <p>
-              Essays, notes, and documentation that capture ideas, decisions,
-              and lessons learned.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="cv" class="section cv-section" aria-labelledby="cv-title">
-        <div>
-          <p class="eyebrow">CV</p>
+      <section id="cv" class="tile tile-dark tile-dark-alt" aria-labelledby="cv-title">
+        <div class="tile-inner centered-copy">
+          <p class="kicker">CV</p>
           <h2 id="cv-title">Resume and curriculum vitae</h2>
           <p>
             Download or open the latest CV as a PDF.
           </p>
+          <div class="cta-row centered" aria-label="CV actions">
+            <a
+              class="button button-primary"
+              href="assets/cv.pdf"
+              type="application/pdf"
+              download
+            >
+              Download CV
+            </a>
+            <a class="button button-secondary on-dark" href="assets/cv.pdf" type="application/pdf">
+              Open PDF
+            </a>
+          </div>
         </div>
-        <a
-          class="button primary"
-          href="assets/cv.pdf"
-          type="application/pdf"
-          download
-        >
-          Download CV
-        </a>
-      </section>
-
-      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Find me online</h2>
-          <p>
-            Visit my GitHub profile for repositories and updates.
-          </p>
-        </div>
-        <a
-          class="text-link"
-          href="https://github.com/Errrade"
-          rel="noopener noreferrer"
-        >
-          github.com/Errrade
-        </a>
       </section>
     </main>
+
+    <footer id="contact" class="site-footer" aria-labelledby="contact-title">
+      <div class="footer-inner">
+        <div>
+          <p class="kicker">Contact</p>
+          <h2 id="contact-title">Find me online</h2>
+        </div>
+        <ul class="footer-links">
+          <li>
+            <a href="https://github.com/Errrade" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </li>
+          <li><a href="assets/cv.pdf" type="application/pdf">CV</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
