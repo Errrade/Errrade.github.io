@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.7in]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\setlist[itemize]{leftmargin=1.1em, topsep=0.25em, itemsep=0.2em}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\vspace{-0.35em}\titlerule]
+
+\titlespacing*{\section}{0pt}{1.0em}{0.45em}
+
+\newcommand{\cvheader}[1]{
+  {\fontsize{22}{24}\selectfont\bfseries #1}\par
+}
+
+\newcommand{\educationentry}[4]{
+  \textbf{#1} \hfill #2 \\
+  #3 \hfill #4 \\
+}
+
+\begin{document}
+
+\cvheader{Minsu Kwon}
+\href{mailto:matty5901@snu.ac.kr}{matty5901@snu.ac.kr} \textbar\ 010-4077-8739 \textbar\ Gangnam-gu, Seoul, Republic of Korea \textbar\ \href{https://github.com/Errrade}{github.com/Errrade}
+
+\section*{Profile}
+Second-year student at Seoul National University College of Liberal Studies with an intended major in Computer Science and Engineering. Interested in AI/Machine Learning, human-computer interaction, large language models, and algorithmic problem solving.
+
+\section*{Education}
+\educationentry{Seoul National University}{Seoul, Republic of Korea}{College of Liberal Studies, intended major in Computer Science and Engineering}{Mar 2025 -- Present}
+\begin{itemize}
+  \item Expected graduation: Mar 2028
+  \item Current standing: Second year
+\end{itemize}
+
+\educationentry{Hwimoon High School}{Seoul, Republic of Korea}{High school diploma}{Mar 2021 -- Feb 2024}
+
+\educationentry{Hwimoon Middle School}{Seoul, Republic of Korea}{Middle school diploma}{Mar 2018 -- Feb 2021}
+
+\section*{Activities}
+\textbf{SNU CLS Act Club LIBERACT} \hfill Member
+\begin{itemize}
+  \item Participating in club activities centered on acting, collaboration, and performance-based production.
+\end{itemize}
+
+\section*{Projects}
+\textbf{OOP Course Project} \hfill Java, C++
+\begin{itemize}
+  \item Built introductory course projects while learning core object-oriented programming concepts in Java and C++.
+\end{itemize}
+
+\textbf{Algorithm Studies}
+\begin{itemize}
+  \item Continuing self-study in algorithms and data structures through implementation practice and problem solving.
+\end{itemize}
+
+\end{document}
