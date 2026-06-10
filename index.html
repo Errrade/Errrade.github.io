@@ -1,7 +1,133 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Personal website for Errrade, including profile, selected work, and CV."
+    >
+    <title>Errrade | Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
   <body>
-    <h1>Welcome to my Personal Page</h1>
-    <p>Hosted on Github Pages!</p>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Errrade home">Errrade</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal website</p>
+          <h1 id="intro-title">Errrade</h1>
+          <p class="lead">
+            A simple home for my profile, selected work, and curriculum vitae.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="assets/cv.pdf" type="application/pdf">
+              View CV
+            </a>
+            <a class="button secondary" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="profile-panel">
+          <img
+            class="profile-image"
+            src="assets/profile.jpg"
+            alt="Portrait of Errrade"
+            width="360"
+            height="360"
+            onerror="this.onerror=null; this.src='assets/profile.png';"
+          >
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Focused, practical, and always improving.</h2>
+        </div>
+        <p>
+          I use this page to share a concise snapshot of who I am, what I am
+          working on, and where to find my current resume.
+        </p>
+      </section>
+
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Work</p>
+          <h2 id="work-title">Selected areas of interest</h2>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <h3>Projects</h3>
+            <p>
+              Selected technical and creative work, with an emphasis on clear
+              problem solving and practical outcomes.
+            </p>
+          </article>
+          <article class="work-card">
+            <h3>Research</h3>
+            <p>
+              Current topics, experiments, and notes from areas I am actively
+              exploring.
+            </p>
+          </article>
+          <article class="work-card">
+            <h3>Writing</h3>
+            <p>
+              Essays, notes, and documentation that capture ideas, decisions,
+              and lessons learned.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="cv" class="section cv-section" aria-labelledby="cv-title">
+        <div>
+          <p class="eyebrow">CV</p>
+          <h2 id="cv-title">Resume and curriculum vitae</h2>
+          <p>
+            Download or open the latest CV as a PDF.
+          </p>
+        </div>
+        <a
+          class="button primary"
+          href="assets/cv.pdf"
+          type="application/pdf"
+          download
+        >
+          Download CV
+        </a>
+      </section>
+
+      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Find me online</h2>
+          <p>
+            Visit my GitHub profile for repositories and updates.
+          </p>
+        </div>
+        <a
+          class="text-link"
+          href="https://github.com/Errrade"
+          rel="noopener noreferrer"
+        >
+          github.com/Errrade
+        </a>
+      </section>
+    </main>
   </body>
 </html>
