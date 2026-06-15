@@ -431,10 +431,30 @@ p {
   color: var(--ink-muted-48);
 }
 
+.course-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.course-card {
+  min-height: 200px;
+}
+
+.course-card .course-code {
+  color: var(--ink);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.19;
+}
+
 .site-footer {
   background: var(--canvas-parchment);
   color: var(--ink-muted-80);
   padding: 64px 24px;
+}
+
+.footer-copy {
+  display: grid;
+  gap: 24px;
 }
 
 .footer-inner {
@@ -486,6 +506,26 @@ p {
   text-underline-offset: 0.2em;
 }
 
+.ai-usage {
+  display: grid;
+  gap: 4px;
+}
+
+.ai-usage span {
+  color: var(--ink-muted-48);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.ai-usage p {
+  color: var(--ink-muted-80);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+}
+
 @media (max-width: 1068px) {
   .tile {
     min-height: 520px;
@@ -532,6 +572,10 @@ p {
   .profile-artifact {
     justify-self: center;
     width: min(80vw, 360px);
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
