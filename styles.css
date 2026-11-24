@@ -115,6 +115,11 @@ a {
   color: var(--body-on-dark);
 }
 
+.global-links a[aria-current="page"] {
+  color: var(--body-on-dark);
+  font-weight: 600;
+}
+
 .sub-nav {
   position: sticky;
   top: 44px;
@@ -586,7 +591,7 @@ p {
   }
 
   .global-links {
-    display: none;
+    gap: 16px;
   }
 
   .tile {
