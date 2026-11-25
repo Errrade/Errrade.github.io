@@ -87,9 +87,8 @@ a {
   padding: 0 24px;
 }
 
-.global-brand,
-.global-links a {
-  color: rgba(255, 255, 255, 0.84);
+.global-brand {
+  color: var(--body-on-dark);
   font-size: 12px;
   font-weight: 400;
   line-height: 1;
@@ -97,25 +96,64 @@ a {
   text-decoration: none;
 }
 
-.global-brand {
-  color: var(--body-on-dark);
+.page-menu {
+  position: relative;
 }
 
-.global-links {
+.page-menu summary {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 4px;
+  color: var(--body-on-dark);
+  font-size: 12px;
+  line-height: 1;
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.page-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.page-menu-chevron {
+  transition: transform 160ms ease;
+}
+
+.page-menu[open] .page-menu-chevron {
+  transform: rotate(180deg);
+}
+
+.page-menu-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 200px;
   margin: 0;
-  padding: 0;
+  padding: 8px 0;
+  border-radius: 12px;
+  background: var(--surface-tile-1);
   list-style: none;
 }
 
-.global-links a:hover,
-.global-brand:hover {
+.page-menu-list a {
+  display: block;
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 14px;
+  line-height: 1.29;
+  text-decoration: none;
+}
+
+.page-menu-list a:hover,
+.page-menu-list a:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
   color: var(--body-on-dark);
 }
 
-.global-links a[aria-current="page"] {
+.page-menu-list a[aria-current="page"] {
   color: var(--body-on-dark);
   font-weight: 600;
 }
@@ -548,10 +586,6 @@ p {
 }
 
 @media (max-width: 833px) {
-  .global-links {
-    gap: 18px;
-  }
-
   .sub-nav-inner {
     grid-template-columns: 1fr auto;
   }
@@ -590,8 +624,19 @@ p {
     padding: 0 16px;
   }
 
-  .global-links {
-    gap: 16px;
+  .page-menu {
+    position: static;
+  }
+
+  .page-menu-list {
+    left: 0;
+    min-width: 0;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .page-menu-list a {
+    padding: 14px 16px;
+    font-size: 17px;
   }
 
   .tile {

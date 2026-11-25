@@ -17,11 +17,17 @@
     <header class="global-nav">
       <nav class="global-nav-inner" aria-label="Pages">
         <a class="global-brand" href="index.html" aria-label="Errrade home">Errrade</a>
-        <!-- Page menu: add a <li> here (and on every page) for each new page. -->
-        <ul class="global-links">
-          <li><a href="index.html" aria-current="page">Introduction</a></li>
-          <li><a href="games.html">Games</a></li>
-        </ul>
+        <!-- Page menu: keep the list in sync on every page; mark the current page with aria-current. -->
+        <details class="page-menu">
+          <summary aria-label="Pages menu, current page: Introduction">
+            <span>Introduction</span>
+            <svg class="page-menu-chevron" viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2 4.5 6 8l4-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <ul class="page-menu-list">
+            <li><a href="index.html" aria-current="page">Introduction</a></li>
+            <li><a href="games.html">Games</a></li>
+          </ul>
+        </details>
       </nav>
     </header>
 
@@ -212,5 +218,6 @@
         </ul>
       </div>
     </footer>
+    <script src="menu.js" defer></script>
   </body>
 </html>
