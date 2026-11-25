@@ -569,6 +569,127 @@ p {
   line-height: 1.43;
 }
 
+/* Games page */
+.game {
+  max-width: 720px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.centered-copy .game-title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.14;
+}
+
+.centered-copy .game-rules {
+  margin: 0 auto 20px;
+  color: var(--ink-muted-48);
+  font-size: 17px;
+  line-height: 1.47;
+}
+
+.game-hud {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.game-hud div {
+  border-radius: 12px;
+  background: var(--canvas-parchment);
+  padding: 10px 8px;
+}
+
+.game-hud dt {
+  color: var(--ink-muted-48);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.game-hud dd {
+  margin: 4px 0 0;
+  color: var(--ink);
+  font-size: 24px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.game-board {
+  position: relative;
+  height: min(60vh, 420px);
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  background: var(--canvas-parchment);
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.game-target {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--primary);
+  padding: 0;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  animation: dot-pop 140ms ease-out;
+}
+
+.game-target:focus-visible {
+  outline: 3px solid var(--primary-focus);
+  outline-offset: 3px;
+}
+
+@keyframes dot-pop {
+  from { transform: translate(-50%, -50%) scale(0.4); }
+  to { transform: translate(-50%, -50%) scale(1); }
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: rgba(245, 245, 247, 0.92);
+}
+
+.game-overlay[hidden] {
+  display: none;
+}
+
+.centered-copy .game-overlay p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1.38;
+}
+
+.game-board.shake {
+  animation: board-shake 180ms ease;
+}
+
+@keyframes board-shake {
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-target,
+  .game-board.shake {
+    animation: none;
+  }
+}
+
 @media (max-width: 1068px) {
   .tile {
     min-height: 520px;

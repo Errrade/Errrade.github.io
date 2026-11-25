@@ -33,9 +33,29 @@
         <div class="tile-inner centered-copy">
           <p class="kicker">Games</p>
           <h1 id="games-title">Mini games</h1>
-          <p>Coming soon.</p>
-          <!-- Game area: add mini games here. -->
-          <div id="game-area"></div>
+          <p>Small browser games. Works with mouse, touch, and keyboard.</p>
+
+          <!-- Game area: add more mini games below this one. -->
+          <div id="game-area">
+            <article class="game" aria-labelledby="dot-rush-title">
+              <h2 id="dot-rush-title" class="game-title">Dot Rush</h2>
+              <p class="game-rules">Tap the blue dot before it moves. 30 seconds. The dot gets smaller and faster.</p>
+
+              <dl class="game-hud">
+                <div><dt>Score</dt><dd id="dr-score">0</dd></div>
+                <div><dt>Time</dt><dd id="dr-time">30.0</dd></div>
+                <div><dt>Best</dt><dd id="dr-best">0</dd></div>
+              </dl>
+
+              <div class="game-board" id="dr-board">
+                <button class="game-target" id="dr-target" type="button" aria-label="Dot" hidden></button>
+                <div class="game-overlay" id="dr-overlay">
+                  <p id="dr-message" aria-live="polite">Ready?</p>
+                  <button class="button button-primary" id="dr-start" type="button">Start</button>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </main>
@@ -67,5 +87,6 @@
       </div>
     </footer>
     <script src="menu.js" defer></script>
+    <script src="games.js" defer></script>
   </body>
 </html>
